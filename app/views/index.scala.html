@@ -1,0 +1,43 @@
+@(notes: Seq[Account], products: Seq[Account], accounts: Seq[Account])
+
+@main("masahito.me main") {
+
+<body>
+    <header>
+        <h1>Nakamura Masato</h1>
+    </heder>
+    <div>
+        <h2>Notes</h2>
+        <ul>
+          @for(n <- notes) {
+            <li><a href="@n.url">@n.title</a></li>
+	  } 
+        </ul>
+    </div>
+    <div>
+        <h2>Products</h2>
+        <ul>
+          @for(p <- products) {
+            <li><a href="@p.url">@p.title</a></li>
+	  }
+        </ul>
+    </div>
+    <div>
+        <h2>Accounts</h2>
+        <ul>
+          @for(p <- accounts) {
+            <li><a href="@p.url">@p.title</a></li>
+	  }
+        </ul>
+    </div>
+    <footer>
+        <p>powered by
+	  <a href="http://www.playframework.org/2.0">Play! 2.0</a>
+	  <a href="http://www.scala-lang.org/">Scala</a>
+	  <a href="http://www.heroku.com/">Heroku</a>
+	</p>
+        2011 - masahito.me
+    </footer>
+</body>
+</html>    
+}
